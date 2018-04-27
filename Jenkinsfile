@@ -11,10 +11,10 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("stackwebApp1")
+        app = docker.build("stackwebapp1")
     }
     
     stage('Run image') {
-        sh "docker run -dit -p 8000:8000 stackwebApp1"
+        sh "docker run -dit -p 8000:8000 stackwebapp1"
     }
 }
